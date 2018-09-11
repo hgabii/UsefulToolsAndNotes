@@ -1,0 +1,19 @@
+TEMPLATE:
+
+- PRODUCT AND VERSION:
+- TITLE: 
+- REPORTED BY:
+- REPORT TIME:
+- SYMPTOMS:
+- ANALYSES:
+- SOLUTION:
+
+### ### ### ###
+
+### Contact Expert ###
+
+### BuzzPlus ###
+
+### Azure ###
+
+### Service Fabric ###
