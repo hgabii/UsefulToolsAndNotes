@@ -9,6 +9,9 @@ Connect-ServiceFabricCluster -ConnectionEndpoint "cecloud-test.westeurope.clouda
 Connect to servicefabric-geolabs SF:
 Connect-ServiceFabricCluster -ConnectionEndpoint "servicefabric-geolabs.westeurope.cloudapp.azure.com:19000" -AzureActiveDirectory -ServerCertThumbprint "CE204015AC977971DD9F60F0AFCA8570E1B9DB61"
 
+Connect to buzzeasy-prod SF:
+Connect-ServiceFabricCluster -ConnectionEndpoint "buzzeasy-prod.westeurope.cloudapp.azure.com:19000" -AzureActiveDirectory -ServerCertThumbprint "A8F0186668486C136DECF6FE4B80B8435D1B8754"
+
 ### Templates ###
 
 Template for Deploying new tenant:
@@ -17,6 +20,10 @@ New-ServiceFabricApplication -ApplicationName fabric:/CloudContactExpert_ghorvat
 
 New-ServiceFabricApplication -ApplicationName fabric:/BuzzPlus_Test -ApplicationTypeName "BuzzPlusType" -ApplicationTypeVersion "1.0.0.20180910.5" 
 -ApplicationParameter
+
+
+New-ServiceFabricApplication -ApplicationName fabric:/BuzzPlus_Test2 -ApplicationTypeName "BuzzPlusType" -ApplicationTypeVersion "1.0.0" -ApplicationParameter @{ServiceBusConnectionString='Endpoint=sb://buzzplus-dev-ns-test2.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=7J8IcSBAepTHN4L9JAwzzUd4RR+Nrj2Ke4t7f1slPI0='; ApplicationInsightsKey='123657a0-f337-4232-9bd6-2da2ac2a9ec7'; PublicAddressRoot='https://cecloud-test.geomant.cloud'; AgentFabricEndpointUrl='https://cecloud-test.geomant.cloud/BuzzPlus_Test2/BuzzPlusEngine/api/fabric/GetState'; AuthorizationServiceAuthority='https://geoauth-dev.azurewebsites.net'; AuthorizationServiceClientId='client.bp.cecloud-test.Tenant2'; AuthorizationServiceClientSecret='204df46d9ef94860b1c49b9193936d58'; AuthorizationServiceClientScope='bp.access'; AuthorizationServiceAudience='bp.access'; AuthorizationTokenEndpoint='https://geoauth-dev.azurewebsites.net/connect/token'; ChatProxy_PartitionCount='1'; ChatProxy_MinReplicaSetSize='3'; ChatProxy_TargetReplicaSetSize='3'; ServiceBusConnectionString_BuzzeasyIn='Endpoint=sb://buzzeasychatcld1sb.servicebus.windows.net/;SharedAccessKeyName=cloudconnector_3;SharedAccessKey=YqDwPeN7J0NU67QUG5pG3c0UftpxIJ8eNcfI82Xjm+A=;EntityPath=cloudconnector_3_1'; ServiceBusConnectionString_BuzzeasyOut='Endpoint=sb://buzzeasychatcld1sb.servicebus.windows.net/;SharedAccessKeyName=cloudconnector_3;SharedAccessKey=6Ns78OMR8IIaP8YcbHQXnN9mG24mkZ3Z9e0DCB8dU/g=;EntityPath=accqueuechat'; DocumentStoreService_InstanceCount='-1'; BlobStorageAccountName='docsdevtest2'; BlobStorageAccountKey='hAcZu+bWlyw8gQ/lPT09VqGRnbF7iSELnwBdI/BTA487xjWi/s2Twth0W6Zpheur4LGi+4TETjTSeaT5BUeLvw=='; BlobStorageContainerName='documentstoreservice-container-test2'; KeyVaultClientId='5b3d648a-6494-4f2a-8fa5-2282e512e5f6'; KeyVaultClientSecret='9DuwWg2azbqrMhkeoARx/wCGCYwTZQZ5W6ZT8rCqpCc='; KeyVaultRSAKeyIdentifier='https://sf-geolabs-vault.vault.azure.net/keys/storage-encryption-key/4ac8c9ec96c444ac83d10744c765c601'; AgentFrontEnd_InstanceCount='1'; NodeJsEnvironment='development'; BuzzPlusEngine_PartitionCount='1'; BuzzPlusEngine_MinReplicaSetSize='3'; BuzzPlusEngine_TargetReplicaSetSize='3'; ResourceHeartbeat_TimeoutSeconds='60'; ChatFrontEndUrl='https://cecloud-test.geomant.cloud/BuzzPlus_ChatConversationWindow_Test2/ChatFrontEnd/'; CQFrontEndUrl=''; ResourceMaxConcurrentWorkItems='3'; ExternalWorkAssignmentEngineUrl=''; AuthenticationEnabled='true'; }
+
 
 Template for upgrading tenant:
 Start-ServiceFabricApplicationUpgrade -ApplicationName fabric:/CloudContactExpert_Tenant -ApplicationTypeVersion "1.0.0.2" -UnmonitoredAuto 
