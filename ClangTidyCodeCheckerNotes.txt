@@ -19,7 +19,7 @@ ninja -j4
 
 // Run Clang Tools tests
 //correct:
-ninja chack-clang-tools
+ninja check-clang-tools
 //not correct:?
 ninja check-clang-tooling
 make check-clang-tooling
