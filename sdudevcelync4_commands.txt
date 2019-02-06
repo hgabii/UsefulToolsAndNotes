@@ -1,0 +1,6 @@
+Set-CESfBConnectorProperties -ApplicationName "CELYNCHA2" -ApplicationFqdn "SDUDEVCELYNC4.sdudev.local" -ApplicationPort 9000 -ApplicationGruu "sip:SDUDEVCELYNC4.sdudev.local@sdudev.local;gruu;opaque=srvr:celyncha2:UqDnvWpOll6r0AHEJl9QtgAA" -CertificateFriendlyName "sdudevcelyncha2"
+Set-CESfbRecorderProperties -ApplicationName "CELYNCHA2_Recorder" -ApplicationFqdn "SDUDEVCELYNC4.sdudev.local" -ApplicationPort 9100 -ApplicationGruu "sip:SDUDEVCELYNC4.sdudev.local@sdudev.local;gruu;opaque=srvr:celyncha2_recorder:31Ein9EcCFymlvFJMqbNCgAA"
+Set-CESystemDatabaseProperties -Fqdn sdudevsql2.sdudev.local -Instance CELYNC2 -Port 3433 -DatabaseName ACESystem -Login ACESystem -Password MyACEP1ssw0rd
+Set-CEReportDatabaseProperties -Fqdn sdudevsql2.sdudev.local -Instance CELYNC2 -Port 3433 -DatabaseName ACEReport -Login ACEReport -Password MyACEP1ssw0rd 
+Add-CEFirewallRules
+Set-CEStartupMethod -Type "auto"

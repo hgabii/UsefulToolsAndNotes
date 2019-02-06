@@ -1,0 +1,2 @@
+
+GeoIdentityServerAdmin.exe CE -u molsak-dev2 T4 https://cecloud-dev.geomant.cloud/CloudContactExpert_IdentityProvider_molsak_dev2/IdentityProvider https://cecloud-dev.geomant.cloud/CloudContactExpert_IdentityProvider_molsak_dev2/IdentityProvider/signin-oidc "openid;email;profile;script.ng;script.ng.id;integration.services" 

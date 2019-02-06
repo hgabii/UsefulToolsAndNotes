@@ -1,0 +1,13 @@
+ 
+10.50.1.101: sa-cecore1.geomantdemo.com
+10.50.1.100: sa-sql.geomantdemo.com
+10.50.1.151: sa-clientpc1.geomantdemo.com
+
+ghorvath@geomantdemo.com - ASDqwe123
+GEOMANTDEMO\ghorvath 
+
+10.50.0.2: lc-dc.geomantdemo.com
+10.50.0.3: lc-dc2.geomantdemo.com
+10.50.0.80: lc-clientpc1.geomantdemo.com
+10.50.0.50: lc-frontend.geomantdemo.com 
+ 
