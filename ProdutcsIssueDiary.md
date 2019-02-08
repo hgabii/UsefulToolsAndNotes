@@ -8,7 +8,7 @@ TEMPLATE:
 - ANALYSES:
 - SOLUTION:
 
-### ### ### ###
+---
 
 ### Contact Expert ###
 
@@ -21,6 +21,16 @@ TEMPLATE:
 - ANALYSES: The ace_presence.xml path is wrong
 - SOLUTION: Set the custom state URL. 
 	(regedit -> HKEY_LOCALMACHINE -> SOFTWARE -> Policies -> Microsoft -> Office -> 15.0/16.0 -> Lync -> CustomStateURL)
+
+#2
+- PRODUCT AND VERSION: Contact Expert 6.1
+- TITLE: Agent Login - Invalid credentials are specified
+- REPORTED BY: own
+- REPORT TIME: 2019.02.06
+- SYMPTOMS: Agent can not login. Login failed: Invalid credentials are specified. Username: ghorvath@sdudev.local,
+Server: http://sdudevcelync3.sdudev.local:8080/ClientAccessServer
+- ANALYSES: Wrong HA peers in the config file.
+- SOLUTION: C:\Users\username\AppData\Roaming\CEHAPeers.xml set the active server.
 
 ### BuzzPlus ###
 

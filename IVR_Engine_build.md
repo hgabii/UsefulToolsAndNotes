@@ -2,7 +2,7 @@
 
 Step-by-step:
 
-1. Verzió növelése minden assemblyben (#)
+1. Verzió növelése minden assemblyben
 2. Megnyitjuk az ucmaivr.iss fájlt (ez az install script)
 3. Átírjuk az elején a verziszámokat, meg ha kell még valami
 4. Beírjuk az új verziószámot a Installer\setup\changelog.txt fájlba
