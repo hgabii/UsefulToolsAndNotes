@@ -32,6 +32,15 @@ Server: http://sdudevcelync3.sdudev.local:8080/ClientAccessServer
 - ANALYSES: Wrong HA peers in the config file.
 - SOLUTION: C:\Users\username\AppData\Roaming\CEHAPeers.xml set the active server.
 
+#3
+- PRODUCT AND VERSION: Contact Expert 5.10
+- TITLE: Agent Application - Script panel sometimes stay hidden (#13226)
+- REPORTED BY: BISZ
+- REPORT TIME: 2018.10.02
+- SYMPTOMS: Script panel does not show up when a call comes in.
+- ANALYSES:
+- SOLUTION:
+
 ### BuzzPlus ###
 
 ### Azure ###
