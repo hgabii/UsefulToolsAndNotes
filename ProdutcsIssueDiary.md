@@ -38,8 +38,17 @@ Server: http://sdudevcelync3.sdudev.local:8080/ClientAccessServer
 - REPORTED BY: BISZ
 - REPORT TIME: 2018.10.02
 - SYMPTOMS: Script panel does not show up when a call comes in.
-- ANALYSES:
-- SOLUTION:
+- ANALYSES: Contact swap page was loaded. In that case we can not show the script. The agent did not clicked the refresh button, when the swap ended.
+- SOLUTION: Not a bug!
+
+#5
+- PRODUCT AND VERSION: Contact Expert 5.8
+- TITLE: ManagementService - Real-time reports not working 
+- REPORTED BY: AccentHousing (jbabai)
+- REPORT TIME: 2019.02.26
+- SYMPTOMS: DRSite present. The stat server is on another server. The real time reports are not showing any data.
+- ANALYSES: In this setup the stat server can run only on one machine. 
+- SOLUTION: Stop the other stat servers.
 
 ### BuzzPlus ###
 

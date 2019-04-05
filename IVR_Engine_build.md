@@ -6,6 +6,7 @@ Step-by-step:
 2. Megnyitjuk az ucmaivr.iss fájlt (ez az install script)
 3. Átírjuk az elején a verziszámokat, meg ha kell még valami
 4. Beírjuk az új verziószámot a Installer\setup\changelog.txt fájlba
+5. Lebuildeljük az IVR-t!
 5. Elindítjuk az Inno Setup alkalmazást
 6. Megnyitjuk az ucmaivr.iss fájlt
 7. Build -> Compile
