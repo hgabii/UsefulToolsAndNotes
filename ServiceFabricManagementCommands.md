@@ -9,7 +9,7 @@ Connect-ServiceFabricCluster -ConnectionEndpoint "cecloud-dev.westeurope.cloudap
 
 #### Connect to cecloud-test SF:
 ```shell
-Connect-ServiceFabricCluster -ConnectionEndpoint "cecloud-test.westeurope.cloudapp.azure.com:19000" -AzureActiveDirectory -ServerCertThumbprint "8B441B37D0BA308B591D933FEF8E199AF207ABF5"
+Connect-ServiceFabricCluster -ConnectionEndpoint "cecloud-test.westeurope.cloudapp.azure.com:19000" -AzureActiveDirectory -ServerCertThumbprint "8F16454A345A136A31C6A0146E0B3FDEF8AEEE73"
 ```
 
 #### Connect to servicefabric-geolabs SF:
@@ -53,9 +53,20 @@ Start-ServiceFabricApplicationUpgrade -UnmonitoredAuto -ApplicationName fabric:/
 ```shell
 Remove-ServiceFabricApplication -ApplicationName fabric:/CloudContactExpert_Tenant
 ```
+
 #### Remove BuzzPlus application:
 ```shell
 Remove-ServiceFabricApplication -ApplicationName fabric:/BuzzPlus_Tenant
+```
+
+#### Force remove
+```
+Remove-ServiceFabricService -ServiceName fabric:/BuzzeasyChatDev/SmsConnector -ForceRemove
+```
+
+#### Create service
+```
+New-ServiceFabricService -Stateless -PartitionSchemeSingleton -ApplicationName fabric:/BuzzeasyChatDev -ServiceName fabric:/BuzzeasyChatDev/ApiCallerService -ServiceTypeName ApiCallerServiceType -InstanceCount 1 -DefaultMoveCost Zero -ServicePackageActivationMode ExclusiveProcess
 ```
 
 ## How to export cert
