@@ -149,6 +149,6 @@ Server: http://sdudevcelync3.sdudev.local:8080/ClientAccessServer
 - ISSUE NUMBER: #19100
 - SYMPTOMS: Attachments not displayed, however the email contains attachments.
 - ANALYSES: Content-type of the attachment is application/octet-stream and the Content-Disposition "header" is empty. The attachment is corrupted.
-- SOLUTION: ...
+- SOLUTION: Display corrupted attachments.
 
 
