@@ -2,6 +2,11 @@
 
 ### SF cluster connections:
 
+#### Connect to sf-dev SF:
+```shell
+Connect-ServiceFabricCluster -ConnectionEndpoint "eu01nt01-dev.westeurope.cloudapp.azure.com:19000" -AzureActiveDirectory -ServerCertThumbprint "F85ABABF17B2A532A9A7838B9CD761D3E5BD997A"
+```
+
 #### Connect to cecloud-dev SF:
 ```shell
 Connect-ServiceFabricCluster -ConnectionEndpoint "cecloud-dev.westeurope.cloudapp.azure.com:19000" -AzureActiveDirectory -ServerCertThumbprint "E9A9CA9194CDACC767E6E488433ECD94D357FE8C"
