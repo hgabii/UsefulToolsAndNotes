@@ -2,6 +2,11 @@
 
 ### SF cluster connections:
 
+#### Connect to local cluster
+```shell
+Connect-ServiceFabricCluster -ConnectionEndpoint "localhost:19000"
+```
+
 #### Connect to sf-dev SF:
 ```shell
 Connect-ServiceFabricCluster -ConnectionEndpoint "eu01nt01-dev.westeurope.cloudapp.azure.com:19000" -AzureActiveDirectory -ServerCertThumbprint "F85ABABF17B2A532A9A7838B9CD761D3E5BD997A"
