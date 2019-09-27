@@ -1,0 +1,4 @@
+
+- We should use one AI. Cannot merge AIs.
+- PowerBI can be embedded into a webpage
+- PowerBI can query the data from AI auth with Azure credential

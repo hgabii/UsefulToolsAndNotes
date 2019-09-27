@@ -1,0 +1,6 @@
+
+Generate:
+GeoIdentityServerAdmin.exe CE -u molsak-dev2 T4 https://cecloud-dev.geomant.cloud/CloudContactExpert_IdentityProvider_molsak_dev2/IdentityProvider https://cecloud-dev.geomant.cloud/CloudContactExpert_IdentityProvider_molsak_dev2/IdentityProvider/signin-oidc "openid;email;profile;script.ng;script.ng.id;integration.services" 
+
+Scripting:
+AuthDomain=https://geoauth-dev.azurewebsites.net; AuthAudience=ce.access; TokenEndpoint=https://geoauth-dev.azurewebsites.net/connect/token; ClientId=client.ce.cecloud-test.Test3; ClientSecret=bd12df3dc6ae42faa2814c9eebe4188b; ClientScope=ce.access,script.ng,integration.services; RedirectProviderUrl=https://cecloud-test.geomant.cloud/CloudContactExpert_Test3/IdentityProvider/AuthRedirect/AuthRedirect

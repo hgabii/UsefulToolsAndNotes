@@ -1,0 +1,20 @@
+ApplicationFqdn         : sdudevinstest.sdudev.local
+ApplicationPort         : 9050
+ApplicationGruu         : sip:SDUDEVINSTEST.sdudev.local@sdudev.local;gruu;opaq
+                          ue=srvr:instest_ce:LVw25--l-1C6v3uQvxkytAAA
+ApplicationName         : instest_ce
+TraceSignaling          : 0
+CertificateFriendlyName : SDUDEVINSTEST
+
+ApplicationFqdn         : sdudevinstest.sdudev.local
+ApplicationPort         : 9100
+ApplicationGruu         : sip:SDUDEVINSTEST.sdudev.local@sdudev.local;gruu;opaq
+                          ue=srvr:instest_ce_recorder:gKZnCoe_XFWF6O-TO9ZyrAAA
+ApplicationName         : instest_ce_recorder
+TraceSignaling          : 0
+CertificateFriendlyName : SDUDEVINSTEST
+ServiceFqdn             : [undefined]
+ServicePort             : [undefined]
+
+Set-CESfBConnectorProperties -ApplicationName "instest_ce" -ApplicationFqdn "sdudevinstest.sdudev.local" -ApplicationPort 9050 -ApplicationGruu "sip:SDUDEVINSTEST.sdudev.local@sdudev.local;gruu;opaque=srvr:instest_ce:LVw25--l-1C6v3uQvxkytAAA" -CertificateFriendlyName "SDUDEVINSTEST"
+Set-CESfbRecorderProperties -ApplicationName "instest_ce_recorder" -ApplicationFqdn "sdudevinstest.sdudev.local" -ApplicationPort 9100 -ApplicationGruu "sip:SDUDEVINSTEST.sdudev.local@sdudev.local;gruu;opaque=srvr:instest_ce_recorder:gKZnCoe_XFWF6O-TO9ZyrAAA"

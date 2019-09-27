@@ -1,0 +1,66 @@
+// Add clang to PATH environment variable
+PATH=/home/hgabii/codechecker_dev_env/build/bin/:$PATH
+
+// Build with clang++
+clang++ all_test.cpp [-std=c++11]
+
+// Build without main function
+clang++ all_test.cpp -c [-std=c++11] 
+
+// Dump clang AST:
+clang++ -Xclang -ast-dump all_test.cpp
+clang-check -ast-dump problematic.cpp --
+
+// Run clang query
+clang-query problematic.cpp --
+
+// Build
+ninja -j4
+
+// Run Clang Tools tests
+//correct:
+ninja check-clang-tools
+//not correct:?
+ninja check-clang-tooling
+make check-clang-tooling
+
+// check file with the checker:
+clang-tidy all_test.cpp -checks=-*,misc-incorrect-pointer-cast -- [-stdlib=c++11]
+
+// changes after adding a new checker
+Updating ./misc/CMakeLists.txt...
+Creating ./misc/IncorrectPointerCastCheck.h...
+Creating ./misc/IncorrectPointerCastCheck.cpp...
+Updating ./misc/MiscTidyModule.cpp...
+Updating ../docs/ReleaseNotes.rst...
+Creating ../test/clang-tidy/misc-incorrect-pointer-cast.cpp...
+Creating ../docs/clang-tidy/checks/misc-incorrect-pointer-cast.rst...
+Updating ../docs/clang-tidy/checks/list.rst...
+
+//
+
+//test
+// // FIXME: Add something that triggers the check here.
+// void f();
+// // CHECK-MESSAGES: :[[@LINE-1]]:6: warning: function 'f' is insufficiently awesome [misc-incorrect-pointer-cast]
+
+// // FIXME: Verify the applied fix.
+// //   * Make the CHECK patterns specific enough and try to make verified lines
+// //     unique to avoid incorrect matches.
+// //   * Use {{}} for regular expressions.
+// // CHECK-FIXES: {{^}}void awesome_f();{{$}}
+
+// // FIXME: Add something that doesn't trigger the check here.
+// void awesome_f2();
+
+clang-tidy all_test.cpp -checks=-*,misc-incorrect-pointer-cast 
+-config="{CheckOptions: [{key: misc-incorrect-pointer-cast.WarnForDifferentSignedness, value: 1}]}"
+
+// rebase
+git fetch upstream
+git checkout master
+git merge upstream/master
+
+
+// create diff
+git diff upstream/master issue_105 > issue105diffv2.txt

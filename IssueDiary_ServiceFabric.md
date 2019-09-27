@@ -1,0 +1,16 @@
+TEMPLATE:
+
+- TITLE: 
+- VERSION:
+- REPORTED BY:
+- REPORT TIME:
+- ISSUE NUMBER:
+- SYMPTOMS:
+- ANALYSES:
+- SOLUTION:
+
+---
+
+### Service Fabric ###
+
+#1
