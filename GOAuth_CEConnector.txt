@@ -5,6 +5,15 @@ G-OAuth-dev management service:
 - swagger: https://geoauth-management-dev.azurewebsites.net/swagger/index.html
 - dashboard: https://portal.azure.com/#@geomantcloud.onmicrosoft.com/dashboard/arm/subscriptions/b02fdaca-d410-4dbd-9708-6b5983c0aad9/resourcegroups/azure-portal-prod-rg/providers/microsoft.portal/dashboards/b0cbc483-bde6-40c2-a055-ac1b9549973d
 
+G_OAuth-qa:
+https://usermanager-qa.geomant.cloud
+
+https://geoauth-qa.geomant.cloud/admin/swagger/
+
+https://geoauth-qa.geomant.cloud/.well-known/openid-configuration
+
+Credentials to G-Auth Admin: geoauth_management_default            GHo8FDfrrD
+
 
 Deploy CEConnector:
 0. Deploy ScriptRunner (if the server does not have public IP):
