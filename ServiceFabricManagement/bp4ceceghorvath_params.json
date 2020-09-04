@@ -1,0 +1,210 @@
+{
+    "ApplicationName":  "fabric:/BuzzPlus4CEceghorvath",
+    "ApplicationTypeName":  "BuzzPlus4CEType_gh",
+    "ApplicationTypeVersion":  "2.0.1",
+    "ApplicationStatus":  1,
+    "HealthState":  1,
+    "ApplicationParameters":  [
+                                  {
+                                      "Name":  "AgentFabricEndpointUrl",
+                                      "Value":  ""
+                                  },
+                                  {
+                                      "Name":  "AgentFrontEnd_InstanceCount",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "ApplicationInsightsKey",
+                                      "Value":  "f96ed0f1-1ae9-4292-820e-ff32f85210f8"
+                                  },
+                                  {
+                                      "Name":  "AuthenticationEnabled",
+                                      "Value":  "false"
+                                  },
+                                  {
+                                      "Name":  "AuthorizationServiceAudience",
+                                      "Value":  "ce.access"
+                                  },
+                                  {
+                                      "Name":  "AuthorizationServiceAuthority",
+                                      "Value":  "https://geoauth-qa.geomant.cloud"
+                                  },
+                                  {
+                                      "Name":  "AuthorizationServiceClientId",
+                                      "Value":  "client.buzzplus4ce.dev.ceghorvath"
+                                  },
+                                  {
+                                      "Name":  "AuthorizationServiceClientScope",
+                                      "Value":  "ce.access script.ng integration.services bp.access"
+                                  },
+                                  {
+                                      "Name":  "AuthorizationServiceClientSecret",
+                                      "Value":  "0d97ce91c6ed44d38bfb118dfb26c1c7"
+                                  },
+                                  {
+                                      "Name":  "AuthorizationServiceHostClientSecret",
+                                      "Value":  "f80228748ee74dafae9ce44640525b74"
+                                  },
+                                  {
+                                      "Name":  "AuthorizationServiceHostName",
+                                      "Value":  "https://geoauth-qa.geomant.cloud"
+                                  },
+                                  {
+                                      "Name":  "AuthorizationServiceTokenEndpoint",
+                                      "Value":  "https://geoauth-qa.geomant.cloud/connect/token"
+                                  },
+                                  {
+                                      "Name":  "CEChatMode",
+                                      "Value":  "true"
+                                  },
+                                  {
+                                      "Name":  "CEGateway_MinReplicaSetSize",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "CEGateway_PartitionCount",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "CEGateway_TargetReplicaSetSize",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "CallbackServiceBackEnd_MinReplicaSetSize",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "CallbackServiceBackEnd_PartitionCount",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "CallbackServiceBackEnd_TargetReplicaSetSize",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "CallbackServiceFrontEnd_InstanceCount",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "ChatBackEndUrl",
+                                      "Value":  "wss://sf-dev.buzzeasy.com/BuzzPlus4CEceghorvath/ChatBackEnd/"
+                                  },
+                                  {
+                                      "Name":  "ChatBackEnd_MinReplicaSetSize",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "ChatBackEnd_PartitionCount",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "ChatBackEnd_TargetReplicaSetSize",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "ChatHubUrl",
+                                      "Value":  "https://sf-dev.buzzeasy.com/ChatHubDev/ChatHubSvc/agentChatHub"
+                                  },
+                                  {
+                                      "Name":  "DocumentStoreUrl",
+                                      "Value":  "https://sf-dev.buzzeasy.com/BuzzPlus4CEceghorvath/DocumentStoreService"
+                                  },
+                                  {
+                                      "Name":  "IdentityProvider_MinReplicaSetSize",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "IdentityProvider_PartitionCount",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "IdentityProvider_TargetReplicaSetSize",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "InteractionManager_MinReplicaSetSize",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "InteractionManager_PartitionCount",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "InteractionManager_TargetReplicaSetSize",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "MediaProxy_MinReplicaSetSize",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "MediaProxy_PartitionCount",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "MediaProxy_TargetReplicaSetSize",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "NodeJsEnvironment",
+                                      "Value":  "development"
+                                  },
+                                  {
+                                      "Name":  "ParameterEncryptionEnabled",
+                                      "Value":  "false"
+                                  },
+                                  {
+                                      "Name":  "PublicAddressRoot",
+                                      "Value":  "https://sf-dev.buzzeasy.com"
+                                  },
+                                  {
+                                      "Name":  "QueueStatusServiceBackEnd_MinReplicaSetSize",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "QueueStatusServiceBackEnd_PartitionCount",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "QueueStatusServiceBackEnd_TargetReplicaSetSize",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "QueueStatusServiceFrontEnd_InstanceCount",
+                                      "Value":  "1"
+                                  },
+                                  {
+                                      "Name":  "ServiceBusConnectionString_BP4CE",
+                                      "Value":  "Endpoint=sb://bp4ce-dev-ceghorvath-ns.servicebus.windows.net/;SharedAccessKeyName=CloudServiceAccessKey;SharedAccessKey=jMWNEDcq/AsA0mwGgHoL2q/nRzLNPlSKIMDoKMJOJp8="
+                                  },
+                                  {
+                                      "Name":  "ServiceBusConnectionString_BuzzPlus",
+                                      "Value":  "Endpoint=sb://buzzplus-dev-ceghorvath-ns.servicebus.windows.net/;SharedAccessKeyName=CloudServiceAccessKey;SharedAccessKey=fJVQtYaOXy+DnldlKIlI4wipc/4gpGQosI1bdSQTeno="
+                                  },
+                                  {
+                                      "Name":  "ServiceBusConnectionString_BuzzeasyIn",
+                                      "Value":  "Endpoint=sb://buzzeasychatqabesb.servicebus.windows.net/;SharedAccessKeyName=cloudconnector_28;SharedAccessKey=0fQJBdaiiAumkMyjEcgL4SdILHALPexLHKZHZPSgdn0=;EntityPath=cloudconnector_28_1"
+                                  },
+                                  {
+                                      "Name":  "ServiceBusConnectionString_BuzzeasyOut",
+                                      "Value":  "Endpoint=sb://buzzeasychatqabesb.servicebus.windows.net/;SharedAccessKeyName=cloudconnector;SharedAccessKey=uKtmxJMN9d3VEHYhnGo3Z1z9W2aPh2J7IuPzhxX13dE=;EntityPath=accqueuechat"
+                                  },
+                                  {
+                                      "Name":  "ServiceBusConnectionString_ContactExpert",
+                                      "Value":  "Endpoint=sb://ce-dev-ceghorvath-ns.servicebus.windows.net/;SharedAccessKeyName=CloudServiceAccessKey;SharedAccessKey=2W4w6xk91/w90PIGRrl8gVVzzVyhxXY6krm4bgClvu4="
+                                  },
+                                  {
+                                      "Name":  "TenantId",
+                                      "Value":  "7E25CAEAA0BC4ACB88BB519956B85701#6"
+                                  }
+                              ],
+    "ApplicationDefinitionKind":  0,
+    "UpgradeTypeVersion":  null,
+    "UpgradeParameters":  null,
+    "ManagedApplicationIdentity":  {
+                                       "ManagedIdentities":  [
+
+                                                             ],
+                                       "TokenServiceEndpoint":  ""
+                                   }
+}

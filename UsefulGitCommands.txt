@@ -7,3 +7,7 @@ git merge upstream/master
 # Revert un-pushed commit
 
 git reset --hard HEAD~1
+
+# Remove merged old N branhes 
+
+git branch -r --merged master --sort=committerdate | grep -v master | sed 's/origin\///' | fmt -1 | head -n -100 | xargs -n 1 git push --delete origin
