@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Init logger with prefix</Title>
+      <Author>Gabor Horvath</Author>
+      <Description></Description>
+      <Shortcut>lgr</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[Logger logger = this.logger.AddPrefix(nameof($MethodName$));$end$]]>
+      </Code>
+      <Declarations>
+        <Literal>
+          <ID>MethodName</ID>
+          <ToolTip>Define the name of the method</ToolTip>
+          <Default></Default>
+        </Literal>
+      </Declarations>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
