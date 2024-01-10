@@ -2,11 +2,11 @@ param(
     [Parameter(Mandatory = $true)][string]$AppTypeName
 )
 
-#resolve all app types
+# Resolve all app types
 $appTypes = Get-ServiceFabricApplicationType -ApplicationTypeName $AppTypeName
 foreach($appType in $appTypes)
 {
-   #try to find the match with any of installed applications
+   # Try to find the match with any of installed applications
    $match = Get-ServiceFabricApplication -ApplicationTypeName $appType.ApplicationTypeName | Where-Object {$_.ApplicationTypeVersion -eq $appType.ApplicationTypeVersion}
    if(!$match)
    {

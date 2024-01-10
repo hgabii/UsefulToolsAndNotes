@@ -1,56 +1,67 @@
+# How to Attach a Network Drive in Linux
+
 To attach (or mount) a network drive in Linux, you'll commonly use the Network File System (NFS) or Samba (for Windows shares). Here's how to do it for both:
 
-### 1. NFS (Network File System):
+## 1. NFS (Network File System)
 
 1. First, make sure you have the required package installed. On a Debian-based system, you can do:
+
    ```bash
    sudo apt update
    sudo apt install nfs-common
    ```
 
-2. Create a directory where you want to mount the network drive:
+1. Create a directory where you want to mount the network drive:
+
    ```bash
    sudo mkdir /mnt/my_network_drive
    ```
 
-3. Mount the NFS share:
+1. Mount the NFS share:
+
    ```bash
    sudo mount -t nfs [IP_or_HOSTNAME]:/path/to/nfs/share /mnt/my_network_drive
    ```
 
-4. To make the mount permanent, you can add it to `/etc/fstab`:
+1. To make the mount permanent, you can add it to `/etc/fstab`:
+
    ```bash
    echo "[IP_or_HOSTNAME]:/path/to/nfs/share /mnt/my_network_drive nfs defaults 0 0" | sudo tee -a /etc/fstab
    ```
 
-### 2. Samba (for Windows shares or Samba shares):
+## 2. Samba (for Windows shares or Samba shares)
 
 1. Make sure you have the required packages installed:
+
    ```bash
    sudo apt update
    sudo apt install cifs-utils
    ```
 
-2. Create a directory where you want to mount the network drive:
+1. Create a directory where you want to mount the network drive:
+
    ```bash
    sudo mkdir /mnt/my_network_drive
    ```
 
-3. If the Windows share requires a username and password, create a credentials file:
+1. If the Windows share requires a username and password, create a credentials file:
+
    ```bash
    echo "username=YOUR_USERNAME" > ~/smbcreds
    echo "password=YOUR_PASSWORD" >> ~/smbcreds
    chmod 600 ~/smbcreds
    ```
 
-4. Mount the Samba share:
+1. Mount the Samba share:
+
    ```bash
    sudo mount -t cifs //IP_or_HOSTNAME/sharename /mnt/my_network_drive -o credentials=~/smbcreds
    ```
 
    If the share doesn't require a username and password, you can omit the `-o credentials=~/smbcreds` part.
 
-5. To make the mount permanent, add it to `/etc/fstab`:
+1. To make the mount permanent, add it to `/etc/fstab`:
+
    ```bash
    echo "//IP_or_HOSTNAME/sharename /mnt/my_network_drive cifs credentials=/home/YOUR_USERNAME/smbcreds 0 0" | sudo tee -a /etc/fstab
    ```

@@ -1,3 +1,8 @@
+# Windows folder lock
+
+Create a bat file with the following content and save it as `FolderLocker.bat` in the folder you want to lock. Double click on the file to lock the folder. To unlock the folder, double click on the file again and enter the password.
+
+```batch
 cls
 
 @ECHO OFF
@@ -67,3 +72,4 @@ echo Locker created successfully
 goto End
 
 :End
+```

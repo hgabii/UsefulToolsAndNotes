@@ -1,10 +1,10 @@
 # Stateful Service Tests
 
-$ConnectArgs = @{  ConnectionEndpoint = 'cecloud-dev.westeurope.cloudapp.azure.com:19000';  X509Credential = $True;  StoreLocation = 'CurrentUser';  StoreName = "MY";  ServerCommonName = "mycluster.cloudapp.net";  FindType = 'FindByThumbprint';  FindValue = "E9A9CA9194CDACC767E6E488433ECD94D357FE8C"; 'ServerCertThumbprint' = "E9A9CA9194CDACC767E6E488433ECD94D357FE8C" }
+$ConnectArgs = @{  ConnectionEndpoint = '[Service Fabric client connection endpoint]';  X509Credential = $True;  StoreLocation = 'CurrentUser';  StoreName = "MY";  ServerCommonName = "mycluster.cloudapp.net";  FindType = 'FindByThumbprint';  FindValue = "[Certificate thumbprint]"; 'ServerCertThumbprint' = "[Server certificate thumbprint]" }
 
 Connect-ServiceFabricCluster @ConnectArgs
 
-$ServiceName = "fabric:/CloudContactExpert/ChatProxy"
+$ServiceName = "fabric:/AppName/ServiceName"
 
 # Test A: moving the primary replica of the specified service to another node.
 #

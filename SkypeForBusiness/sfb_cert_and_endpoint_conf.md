@@ -1,6 +1,6 @@
-# SfB related guides
+# Skype for Business related guides
 
-## How to issue new cert for SfB trusted application
+## How to issue new certificate for SfB trusted application
 
 MS documentation: [https://docs.microsoft.com/en-us/skype-sdk/ucma/activating-an-auto-provisioned-application](https://docs.microsoft.com/en-us/skype-sdk/ucma/activating-an-auto-provisioned-application)
 
@@ -14,7 +14,7 @@ CE guide: [https://docs.geomant.com/ce/7.0/Configuring_CE_Certificates.html?q=Ce
     ```powershell
     Get-CsTrustedApplication > C:/Temp/endpont.txt
     ```
- 
+
 - Create new endpoint:
 
     ```powershell
