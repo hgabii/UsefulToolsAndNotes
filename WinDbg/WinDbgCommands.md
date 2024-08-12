@@ -60,6 +60,12 @@ Dumps the contents of the specified generation:
 !dumpgen 2 -type System.Data.SqlClient._SqlMetaData
 ```
 
+Dump into file:
+
+```
+.shell -i- -ci "!dumpgen 2 -type System.Data.SqlClient._SqlMetaData" findstr "^" >o:\Public\20240710_UnityMemoryDump\\dumpgen2.log
+```
+
 Displays the fields of an object or type:
 
 ```
