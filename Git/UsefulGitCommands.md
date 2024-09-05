@@ -32,6 +32,12 @@ git fetch -p
 git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D
 ```
 
+## Change the capitalization of filenames
+
+```bash
+git mv src/collision/b2AABB.js src/collision/B2AABB.js
+```
+
 ## Others
 
 ```bash

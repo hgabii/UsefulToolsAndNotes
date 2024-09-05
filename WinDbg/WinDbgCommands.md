@@ -10,6 +10,10 @@ Load SOS:
 .load c:\Windows\Microsoft.NET\Framework64\v4.0.30319\sos.dll
 ```
 
+```
+.loadby sos clr
+```
+
 Find instances with a specific MemoryType:
 
 ```
@@ -34,6 +38,49 @@ Dump Object:
 !DumpObj /d 00000263673c1258
 ```
 
+```
+!threads
+```
+
+```
+ThreadCount:      2551
+UnstartedThread:  0
+BackgroundThread: 179
+PendingThread:    0
+DeadThread:       2372
+Hosted Runtime:   no
+                                                                                                        Lock  
+       ID OSID ThreadOBJ           State GC Mode     GC Alloc Context                  Domain           Count Apt Exception
+   8    1 9e9c 00000262dee825b0    28220 Preemptive  0000000000000000:0000000000000000 00000262def1c870 0     Ukn 
+  50    2 99d8 00000269d2645f50  202b220 Preemptive  0000000000000000:0000000000000000 00000269e714fd40 0     MTA (Finalizer) 
+  52    3 7f14 00000269d267dd90  102a220 Preemptive  0000000000000000:0000000000000000 00000262def1c870 0     MTA (Threadpool Worker) 
+  53    4 be00 00000269d269a050  2021220 Preemptive  0000000000000000:0000000000000000 00000262def1c870 0     Ukn 
+XXXX    6    0 00000269d2ae2b30  8038820 Preemptive  0000000000000000:0000000000000000 00000262def1c870 0     MTA (Threadpool Completion Port) 
+XXXX    8    0 00000269d2c34b00  1039820 Preemptive  0000000000000000:0000000000000000 00000262def1c870 0     Ukn (Threadpool Worker) 
+```
+
+```
+!ThreadState 202b220
+```
+
+```
+    Legal to Join
+    Background
+    CLR Owns
+    CoInitialized
+    In Multi Threaded Apartment
+    Fully initialized
+    Interruptible
+```
+
+```
+~~[99d8]s
+```
+
+```
+!clrstack
+```
+
 ## Using SOSEX
 
 https://knowledge-base.havit.eu/2017/10/09/windbg-sosex-help-command-reference/
@@ -41,13 +88,25 @@ https://knowledge-base.havit.eu/2017/10/09/windbg-sosex-help-command-reference/
 Load SOSEX:
 
 ```
-.load C:\Users\GaborHorvath\OneDrive - Telio Group\Desktop\Sosex\sosex.dll
+.load c:\Temp\Sosex\sosex.dll
+```
+
+Dump stat:
+
+```
+.shell -i- -ci "!dumpheap -stat" findstr "^" > o:\Public\20240710_UnityMemoryDump\dumpstat.log
 ```
 
 Build heap index:
 
 ```
 !bhi
+```
+
+Load heap index:
+
+```
+!lhi o:\Public\20240710_UnityMemoryDump\w3wp_HeapIndex.bin
 ```
 
 Dumps the contents of the specified generation:
