@@ -51,3 +51,9 @@ git branch -v | grep -E 'ahead|behind' | sed -r 's/[ *]\s(\S*).*(\[(ahead|behind
 ```bash
 git branch -v | grep -E 'ahead|behind' --invert-match | grep --invert-match master | cut -d "/" -f 3-
 ```
+
+## View history for part of a file (like a function)
+
+```bash
+git log -L 15,26:path/to/file
+```
